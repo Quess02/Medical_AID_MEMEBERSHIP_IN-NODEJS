@@ -5,7 +5,7 @@ const path = require("path");
 //import Member
 
 
-
+//connect to mongodb
 var connection=mongoose.connect('mongodb://localhost:27017/medicalAid');
 mongoose.Promise=global.Promise
 const Member=require('./model/Member')(mongoose);
@@ -26,7 +26,7 @@ app.get("/dependent", (req, res) =>{
 app.get("/report", (req, res) =>{
     res.sendFile(path.join(__dirname,'/public/report.html'));
 });
-
+//view member endpoint 
 app.get("/members", (req, res) =>{
   
     res.sendFile(path.join(__dirname,'/public/report.html'));

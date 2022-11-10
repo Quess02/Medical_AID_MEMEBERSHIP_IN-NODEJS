@@ -21,18 +21,11 @@ $(document).ready(function(){
                 btn.innerText='Register'
             },
             success:(data)=>{
-                if(!data.success){
-                    alertObj.innerHTML=`<div id="alert" class=" alert alert-danger">${data.msg}</div>`
-                }else{
-                    alertObj.innerHTML=`<div id="alert" class=" alert alert-success">${data.msg}</div>`
-
-                 //redirecting from here
-                 //window.location.href='/members'
-                }
+             
+                    alertObj.innerHTML=`<div  class=" alert alert-info">${data.msg}</div>`
                
             },
             error:function(){
-                alertObj.innerHTML=`<div id="alert" class=" alert alert-danger">Error occured</div>`
                 console.log('error occured');
             }
         });
